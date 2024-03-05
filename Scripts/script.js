@@ -1,8 +1,10 @@
+// Seleccionar elementos del HTML
 let textoCodificar = document.getElementById(`texto`);
 let textoCodificado = document.getElementById(`resultado`);
 let msgTexto = document.getElementById(`titulo`);
 let msgCopia = document.getElementById(`textoCopia`);
 
+// Matriz de sustitución
 let matriz = [
     ["a", "xbf"],
     ["e", "an"],
@@ -11,6 +13,7 @@ let matriz = [
     ["u", "rat"]
 ];
 
+//Accion del boton de encriptacion
 function btnEncriptar(){
     let texto = encriptar(textoCodificar.value);
     msgCopia.innerHTML = "";
@@ -27,6 +30,7 @@ function btnEncriptar(){
     }
 }
 
+// Función para encriptar texto
 function encriptar(textoCodificado){
     for(let i = 0; i < matriz.length; i++){
         if (textoCodificado.includes(matriz[i][0])){
@@ -39,6 +43,7 @@ function encriptar(textoCodificado){
     return textoCodificado;
 }
 
+//Accion del boton para desencriptacion
 function btnDesencriptar(){
     msgCopia.innerHTML = "";
     eliminarBoton();
@@ -55,6 +60,7 @@ function btnDesencriptar(){
     }
 }
 
+// Función para desencriptar texto
 function desencriptar(textoCodificado){
     for(let i = 0; i < matriz.length; i++){
         if (textoCodificado.includes(matriz[i][1])){
@@ -67,71 +73,52 @@ function desencriptar(textoCodificado){
     return textoCodificado;
 }
 
+// Función para mostrar una imagen cuando no se encuentra
 function ponerImagen() {
-    // Verificar si la imagen ya está presente
     if (!document.getElementById("imagenBusqueda")) {
-        // Crear un elemento de imagen
         var imagen = document.createElement("img");
         imagen.id = "imagenBusqueda";
-        imagen.src = "Imagenes/imagen.PNG"; // Ruta de la imagen
+        imagen.src = "Imagenes/imagen.PNG";
         imagen.alt = "imagen no encontrada";
-        
-        // Agregar la imagen al contenedor
         document.getElementById("imagen").appendChild(imagen);
     }
 }
 
+// Función para quitar la imagen
 function quitarImagen() {
-    // Seleccionar la imagen por su ID
     var imagen = document.getElementById("imagenBusqueda");
 
     // Verificar si la imagen existe
     if (imagen) {
-        // Eliminar la imagen
         imagen.parentNode.removeChild(imagen);
     }
 }
 
+// Función para crear un botón de copia de texto
 function crearBoton() {
-    // Crear un nuevo botón
     var boton = document.createElement("button");
-    boton.innerHTML = "COPIAR"; // Texto dentro del botón
-
-    // Establecer un identificador y una clase al botón (opcional)
+    boton.innerHTML = "COPIAR";
     boton.id = "miBoton";
-    boton.className = "desencriptarbt"; // Puedes definir estilos en CSS para esta clase
+    boton.className = "desencriptarbt";
 
     // Definir una función que maneje el evento clic
     function clicEnBoton() {
-        // Seleccionar el contenido a copiar
         var contenido = document.getElementById("resultado");
-
-        // Crear un rango de selección
         var range = document.createRange();
         range.selectNodeContents(contenido);
-
-        // Seleccionar el contenido
         var seleccion = window.getSelection();
         seleccion.removeAllRanges();
         seleccion.addRange(range);
-
-        // Copiar el contenido seleccionado
         document.execCommand("copy");
-
-        // Deseleccionar el contenido
         seleccion.removeAllRanges();
-
-        // Informar al usuario que se ha copiado el contenido
         msgCopia.innerHTML = "Contenido copiado al portapapeles.";
     }
 
-    // Agregar un evento de clic al botón y pasar la función como argumento
     boton.addEventListener("click", clicEnBoton);
-
-    // Agregar el botón al contenedor en el documento HTML
     document.getElementById("contenedorBoton").appendChild(boton);
 }
 
+// Función para eliminar el botón de copia de texto
 function eliminarBoton() {
     var boton = document.getElementById("miBoton");
     var contenedor = document.getElementById("contenedorBoton");
