@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="Estilos/style.css">
+    <link rel="stylesheet" href="Estilos/responsivo.css">
+</head>
+<body style="background: #F3F5FC;">
+    <section class="seccion">
+        <div class="ingTexto">
+            <img src="Imagenes/Logo.jpg" alt="no se encuentra la imagen">
+            <br>
+            <textarea name="texto" id="texto"  rows="16" placeholder="Ingrese texto aqui"></textarea>
+            <div class="opciones">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2"/></svg> Solo letras minsculas y sin acentos</p>
+                <button onclick="btnEncriptar()" class="encriptarbt">ENCRIPTAR</button>
+                <button onclick="btnDesencriptar()" class="desencriptarbt">DESENCRIPTAR</button>
+            </div>
+        </div>
+        <div class="veriTexto">
+            <div id="imagen">
+                <img id="imagenBusqueda" src="Imagenes/imagen.PNG" alt="imagen no encontrada">
+            </div>
+            <h2 id="titulo">Ningun mensaje fue encontrado</h2>
+            <p id="resultado">Ingresa el texto que desees encriptar o desencriptar</p>
+            <p id="textoCopia" class="copiar"></p>
+            <div id="contenedorBoton"></div>
+        </div>
+    </section>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>

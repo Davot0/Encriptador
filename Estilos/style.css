@@ -1,0 +1,94 @@
+.seccion{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.ingTexto{
+    margin: 0px 5px;
+}
+
+
+.ingTexto img{
+    margin: 3% 4%;
+}
+
+.ingTexto textarea{
+    margin: 0% 0% 0% 10%;
+    font-size: 30px;
+    color: #0A3871;
+    border: none;
+    text-decoration: none;
+    width: 80%;
+    height: 70%;
+    resize: none;
+    outline: none;
+    background-color: #F3F5FC;
+}
+
+.ingTexto .opciones{
+    text-align: center;
+}
+
+.ingTexto textarea::placeholder{
+    color: #0A3871;
+}
+
+.ingTexto p{
+    color: #495057;
+    font-size: 18px;    
+}
+
+button{
+    margin: 1% 1%;
+    height: 60px;
+    width: 320px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.encriptarbt{
+    background-color: #0A3871;
+    color: #FFFFFF;
+    border: 1px #0A3871 solid;
+}
+
+.desencriptarbt{
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: 1px #0A3871 solid;
+}
+
+button:hover{
+    background-color: #609ED4;
+    color: #000000;
+}
+
+.veriTexto{
+    margin: 0px 50px 0px 0px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.veriTexto img{
+    padding-top: 25%;
+    width: 100%;
+}
+
+.veriTexto h2{
+    color: #343A40;
+    font-size: 40px;
+}
+
+.veriTexto p{
+    color: #495057;
+    font-size: 35px;
+}
+
+.veriTexto .copiar{
+    font-size: 20px;
+}

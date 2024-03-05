@@ -1,0 +1,47 @@
+@media (max-width: 1650px){
+    .seccion{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .ingTexto textarea{
+        height: 70%;
+    }
+
+    .veriTexto{
+        height: 100%;
+    }
+
+    .veriTexto img{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .seccion{
+        display: block;
+    }
+
+    .ingTexto textarea{
+        height: 50%;
+        width: 82% ;
+    }
+
+    .veriTexto{
+        margin: 20px;
+    }
+
+    .veriTexto img{
+        display: none;
+    }
+
+    .veriTexto h2{
+        font-size: 35px;
+    }
+
+    .veriTexto p{
+        font-size: 30px;
+    }
+
+}
