@@ -45,3 +45,15 @@
     }
 
 }
+
+@media (max-width: 420px) {
+    .ingTexto textarea{
+        height: 10%;
+        width: 82% ;
+    }
+
+    button{
+        height: 60px;
+        width: 180px;
+    }
+}
